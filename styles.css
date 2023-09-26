@@ -1,0 +1,121 @@
+/* Estilos CSS para la barra superior */
+header {
+    background-color: #ffefcd;
+    color: #1D1D1B;
+    padding: 50px 0;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.logo img {
+    width: 200px; /* Ajusta el tamaño de tu logo */
+    height: auto;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: #1D1D1B;
+}
+
+.search-bar input {
+    padding: 5px;
+    border: none;
+}
+
+.search-bar button {
+    background-color: #1D1D1B;
+    color: #fff;
+    border: none;
+    padding: 5px 8px;
+    cursor: pointer;
+}
+
+.cart {
+    position: relative;
+}
+
+.cart-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #0f0f0f;
+    border: 1px solid #080808;
+    width: 200px;
+    display: none;
+}
+
+.cart:hover .cart-dropdown {
+    display: block;
+}
+
+/* Establece el ancho del main en un 80% del ancho de la pantalla */
+main {
+    width: 65%;
+}
+
+/* Establece la altura del main en un 60% del alto de la pantalla */
+main {
+    height: 60%;
+}
+
+
+/* Establece el ancho del main */
+main {
+    width: 65%; /* Cambia el valor según lo que desees */
+    margin: 0 auto; /* Configura los márgenes automáticos para centrar horizontalmente */
+}
+
+/* Establece la altura del main */
+main {
+    height: 60%; /* Cambia el valor según lo que desees */
+    margin: auto; /* Configura los márgenes automáticos para centrar vertical y horizontalmente */
+}
+
+/* Estilos para los filtros */
+.filters {
+    float: left; /* Coloca los filtros a la izquierda del contenido principal */
+    width: 250px; /* Cambia el valor según el ancho deseado para los filtros */
+    /* Agrega otros estilos según tus preferencias */
+}
+
+/* Estilos para el contenido principal */
+main {
+    margin-left: 260px; /* Ajusta el margen izquierdo para dejar espacio para los filtros */
+    /* Agrega otros estilos según tus preferencias */
+}
+
+
+/* Estilos para el carrito de compras */
+#cart-container {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Inicialmente fuera de la pantalla */
+    width: 300px;
+    height: 100%;
+    background-color: #d64d4d;
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    transition: right 0.3s ease-in-out;
+    z-index: 999;
+}
+
+.cart-hidden {
+    right: -300px; /* Oculto inicialmente */
+}
+
+.cart-visible {
+    right: 420; /* Visible al desplegar */
+}
+
+/* Estilos adicionales según tus preferencias */
