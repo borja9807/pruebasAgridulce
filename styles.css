@@ -115,7 +115,7 @@ main {
 }
 
 .cart-visible {
-    right: 420; /* Visible al desplegar */
+    right: 420px !important; /* Visible al desplegar */
 }
 
 /* Estilos adicionales según tus preferencias */
