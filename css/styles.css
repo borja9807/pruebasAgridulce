@@ -1,31 +1,52 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+html{
+    font-family: "Magicher", serif;
+}
 /* Estilos CSS para la barra superior */
 header {
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
     background-color: #ffefcd;
     color: #1D1D1B;
-    padding: 50px 0;
+    padding: 5px 40px;
+
 }
 
 .top-nav {
+
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 40px;
+    align-items: none;
+    padding: 0 0px;
 }
 
 .logo img {
-    width: 200px; /* Ajusta el tamaño de tu logo */
+    text-align: center;
+    width: 180px; /* Ajusta el tamaño de tu logo */
     height: auto;
 }
 
 .menu {
     list-style: none;
     display: flex;
-    gap: 35px;
+    gap: 40px;
 }
 
 .menu-item a {
+    font-size: 1.3rem;
     text-decoration: none;
     color: #1D1D1B;
+}
+
+.user-actions {
+    display: flex;
+    gap: 15px;
 }
 
 .search-bar input {
@@ -59,29 +80,17 @@ header {
     display: block;
 }
 
+aside {
+    margin-top: 10px;
+    margin-left: 40px;
+    margin-bottom: 900px;
+}
 /* Establece el ancho del main en un 80% del ancho de la pantalla */
 main {
+    margin-top: 10px;
     width: 65%;
+    margin-left: 260px;
 }
-
-/* Establece la altura del main en un 60% del alto de la pantalla */
-main {
-    height: 60%;
-}
-
-
-/* Establece el ancho del main */
-main {
-    width: 65%; /* Cambia el valor según lo que desees */
-    margin: 0 auto; /* Configura los márgenes automáticos para centrar horizontalmente */
-}
-
-/* Establece la altura del main */
-main {
-    height: 60%; /* Cambia el valor según lo que desees */
-    margin: auto; /* Configura los márgenes automáticos para centrar vertical y horizontalmente */
-}
-
 /* Estilos para los filtros */
 .filters {
     float: left; /* Coloca los filtros a la izquierda del contenido principal */
@@ -89,11 +98,7 @@ main {
     /* Agrega otros estilos según tus preferencias */
 }
 
-/* Estilos para el contenido principal */
-main {
-    margin-left: 260px; /* Ajusta el margen izquierdo para dejar espacio para los filtros */
-    /* Agrega otros estilos según tus preferencias */
-}
+
 
 
 /* Estilos para el carrito de compras */
@@ -102,9 +107,9 @@ main {
     top: 0;
     right: -300px; /* Inicialmente fuera de la pantalla */
     width: 300px;
-    height: 100%;
-    background-color: #d64d4d;
-    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.2);
+    height: 40%;
+    background-color: #9b8888;
+    box-shadow: -2px 0 100px rgba(0, 0, 0, 0.2);
     overflow-y: auto;
     transition: right 0.3s ease-in-out;
     z-index: 999;
@@ -115,7 +120,41 @@ main {
 }
 
 .cart-visible {
-    right: 420px !important; /* Visible al desplegar */
+    right: 0px !important; /* Visible al desplegar */
 }
 
 /* Estilos adicionales según tus preferencias */
+
+
+/* Estilos para ocultar la pestaña */
+.hidden {
+    display: none;
+}
+
+/* Estilos para el botón de abrir la pestaña (puedes personalizarlos) */
+#open-tab-button {
+    justify-content: left;
+    background-color:#ffefcd;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+}
+
+/* Estilos para los elementos de la pestaña (puedes personalizarlos) */
+#tab-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+#tab-content ul li {
+    margin-bottom: 10px;
+}
+
+#tab-content ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+

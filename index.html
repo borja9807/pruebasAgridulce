@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AGRIDULCE</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" href="/fonts/Magicher.ttf">
 </head>
+
 <body>
     <header>
+        <div class="logo">
+            <a href="index.html"><img src="./img/PRUEBA.png" alt="Logo de la tienda" width="10" height=""></a>
+        </div>
         <nav class="top-nav">
-            <div class="logo">
-                <a href="index.html"><img src="./img/PRUEBA.png" alt="Logo de la tienda" width="10" height=""></a>
-            </div>
+
+            <!-- Botón para abrir la pestaña -->
+            <!--button id="open-tab-button"><img src="/img/pngegg.png" alt="desplegar" width="30" height=""></button>
+    
+            !< Contenedor de la pestaña desplegable>
+            <div id="tab-content" class="hidden">
+                <!-- Elementos de la pestaña -->
+            <!--<ul>
+                    <li><a href="#">Boxers de Hombre</a></li>
+                    <li><a href="#">Brasier</a></li>
+                    <li><a href="#">Conjuntos</a></li>
+                    <li><a href="#">Trios de Calzones</a></li>
+                </ul>
+            </div> -->
             <ul class="menu">
                 <li class="menu-item">
                     <a href="#">Boxers de Hombre</a>
@@ -26,39 +44,44 @@
                     <a href="#">Tríos de Calzones</a>
                 </li>
             </ul>
+        </nav>
+        <div class="user-actions">
             <div class="search-bar">
-                <input type="text" placeholder="Buscar productos">
-                <button>Buscar</button>
+                <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+                <form class="hidden">
+                    <input type="text" placeholder="Buscar productos">
+                    <button>Buscar</button>
+                </form>
             </div>
             <div class="cart">
-                <a href="#" onclick="toggleCart()" id="cart-button">Carrito </a>
+                <a href="#" onclick="toggleCart()" id="cart-button"><i class="fa-solid fa-cart-shopping fa-xl"></i> </a>
                 <div class="cart-container">
                     <!-- Contenido del carrito -->
                 </div>
             </div>
-        </nav>
+        </div>
     </header>
     <aside class="filters">
         <h2>Filtros</h2>
-            <div class="filter">
-                <h3>Color</h3>
-                    <ul>
-                        <li><input type="checkbox" id="filter-color-red"> <label for="filter-color-red">Rojo</label></li>
-                        <li><input type="checkbox" id="filter-color-blue"> <label for="filter-color-blue">Azul</label></li>
-                        <!-- Agrega más opciones de color según sea necesario -->
-                    </ul>
-                </div>
-                <div class="filter">
-                    <h3>Talla</h3>
-                    <ul>
-                        <li><input type="checkbox" id="filter-size-s"> <label for="filter-size-s">S</label></li>
-                        <li><input type="checkbox" id="filter-size-m"> <label for="filter-size-m">M</label></li>
-                        <li><input type="checkbox" id="filter-size-l"> <label for="filter-size-l">L</label></li>
-                        <li><input type="checkbox" id="filter-size-xl"> <label for="filter-size-xl">XL</label></li>
-                        <!-- Agrega más opciones de talla según sea necesario -->
-                    </ul>
-                </div>
-                <!-- Puedes agregar más filtros según tus necesidades -->
+        <div class="filter">
+            <h3>Color</h3>
+            <ul>
+                <li><input type="checkbox" id="filter-color-red"> <label for="filter-color-red">Rojo</label></li>
+                <li><input type="checkbox" id="filter-color-blue"> <label for="filter-color-blue">Azul</label></li>
+                <!-- Agrega más opciones de color según sea necesario -->
+            </ul>
+        </div>
+        <div class="filter">
+            <h3>Talla</h3>
+            <ul>
+                <li><input type="checkbox" id="filter-size-s"> <label for="filter-size-s">S</label></li>
+                <li><input type="checkbox" id="filter-size-m"> <label for="filter-size-m">M</label></li>
+                <li><input type="checkbox" id="filter-size-l"> <label for="filter-size-l">L</label></li>
+                <li><input type="checkbox" id="filter-size-xl"> <label for="filter-size-xl">XL</label></li>
+                <!-- Agrega más opciones de talla según sea necesario -->
+            </ul>
+        </div>
+        <!-- Puedes agregar más filtros según tus necesidades -->
     </aside>
 
     <main>
@@ -68,49 +91,51 @@
             <ul class="lista-productos-nuevos">
                 <!-- Los productos nuevos se mostrarán aquí -->
                 <li class="product" data-color="Rojo" data-size="M"></li>
-        <div class="product" id="product-1">
-            <img src="./img/foto_no_exif (2).jpg" alt="Producto 1" width="" height="520">
-            <h2>Lebron loco</h2>
-            <p>Descripción del producto 1.</p>
-            <p>Precio: $19.99</p>
-    
-            <div>
-                <label for="size-1">Talla:</label>
-                <select id="size-1">
-                    <option value="S">S</option>
-                    <option value="M">M</option>
-                    <option value="L">L</option>
-                    <option value="XL">XL</option>
-                </select>
-            </div>
-    
-            <p id="available-quantity-1">Cantidad Disponible: 10</p>
-            
-            <button onclick="addToCart(1)">Agregar al Carrito</button>
-        </div>
-    
-        <div class="product" id="product-2">
-            <img src="./img/foto_no_exif.jpg" alt="Producto 2" width="300" height="400">
-            <h2>Lebron juicioso</h2>
-            <p>Descripción del producto 2.</p>
-            <p>Precio: $29.99</p>
-    
-            <div>
-                <label for="size-2">Talla:</label>
-                <select id="size-2">
-                    <option value="S">S</option>
-                    <option value="M">M</option>
-                    <option value="L">L</option>
-                    <option value="XL">XL</option>
-                </select>
-            </div>
-    
-            <p id="available-quantity-2">Cantidad Disponible: 5</p>
-            
-            <button onclick="addToCart(2)">Agregar al Carrito</button>
-        </div>
+                <div class="product" id="product-1">
+                    <img src="./img/foto_no_exif (2).jpg" alt="Producto 1" width="" height="520">
+                    <h2>Lebron loco</h2>
+                    <p>Descripción del producto 1.</p>
+                    <p>Precio: $19.99</p>
+
+                    <div>
+                        <label for="size-1">Talla:</label>
+                        <select id="size-1">
+                            <option value="Selecciona una talla"></option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                    </div>
+
+                    <p id="available-quantity-1">Cantidad Disponible: 10</p>
+
+                    <button onclick="addToCart(1)">Agregar al Carrito</button>
+                </div>
+
+                <div class="product" id="product-2">
+                    <img src="./img/foto_no_exif.jpg" alt="Producto 2" width="300" height="400">
+                    <h2>Lebron juicioso</h2>
+                    <p>Descripción del producto 2.</p>
+                    <p>Precio: $29.99</p>
+
+                    <div>
+                        <label for="size-2">Talla:</label>
+                        <select id="size-2">
+                            <option value="Selecciona una talla"></option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                    </div>
+
+                    <p id="available-quantity-2">Cantidad Disponible: </p>
+
+                    <button onclick="addToCart(2)">Agregar al Carrito</button>
+                </div>
     </main>
-    
+
     <!-- Carrito de compras -->
     <div id="cart-container" class="cart-hidden">
         <div id="cart-content">
@@ -124,5 +149,7 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/0c9120dd6a.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

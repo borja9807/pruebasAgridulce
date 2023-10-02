@@ -73,6 +73,16 @@ function addToCart(productId) {
     }   
 }
 
+// Obtén los elementos necesarios
+const openTabButton = document.getElementById('open-tab-button');
+const tabContent = document.getElementById('tab-content');
+
+// Agrega un evento clic al botón
+openTabButton.addEventListener('click', () => {
+    // Alterna la visibilidad de la pestaña
+    tabContent.classList.toggle('hidden');
+});
+
 // Función para renderizar el carrito
 function renderCart() {
     // Limpia la lista de elementos del carrito

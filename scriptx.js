@@ -79,3 +79,19 @@ function toggleCart() {
 }
 
 // Resto de tu código JavaScript, incluyendo la lógica de filtros y otros aspectos de la tienda
+
+
+
+
+<li class="menu-item">
+                    <a href="#">Boxers de Hombre</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">Brasier</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">Conjuntos</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">Tríos de Calzones</a>
+                </li>
