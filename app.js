@@ -15,18 +15,19 @@ const pool = mysql.createPool({
     host            : 'localhost',
     user            : 'root',
     password        : '',
-    database        : 'pruebasproductos'
+    database        : 'inventario'
 })
 
 // get all products
-app.length('', (req, res) =>{
+app.get('', (req, res) => {
 
     pool.getConnection((err, connection) => {
         if(err) throw err
         console.log(`connected as id ${connection.threadId}`)
 
-        connection.query('SELECT * from nombre', (err, rows) =>{
-            connection.release()//return the connection to pool
+        connection.query('SELECT * FROM inventariosDeProductos'
+        , (err, rows) =>{
+            connection.release() //return the connection to pool
 
             if(!err){
                 res.send(rows)
