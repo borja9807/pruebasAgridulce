@@ -88,8 +88,8 @@ aside {
 /* Establece el ancho del main en un 80% del ancho de la pantalla */
 main {
     margin-top: 10px;
-    width: 65%;
-    margin-left: 260px;
+    width: 100%;
+    margin-left: auto;
 }
 /* Estilos para los filtros */
 .filters {
@@ -97,7 +97,19 @@ main {
     width: 250px; /* Cambia el valor según el ancho deseado para los filtros */
     /* Agrega otros estilos según tus preferencias */
 }
+.lista-productos-nuevos {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
+}
+
+#productos-nuevos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
 
 
 
