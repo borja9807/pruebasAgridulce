@@ -55,11 +55,11 @@
         </nav>
         <div class="user-actions">
             <div class="search-bar">
-                <form class="">
+                <i class="fa-solid fa-magnifying-glass fa-lg search-bar-icon"></i>
+                <form id="search-form" class="hide-bar">
                     <input type="text" class="search-bar-input" placeholder="Buscar productos">
                     <button class="search-bar-btn">Buscar</button>
                 </form>
-                <i class="fa-solid fa-magnifying-glass fa-lg search-bar-icon"></i>
             </div>
             <div class="cart">
                 <a href="#" onclick="toggleCart()" id="cart-button"><i class="fa-solid fa-cart-shopping fa-lg"></i> </a>
@@ -373,8 +373,8 @@
             <button id="close-cart">Cerrar Carrito</button>
         </div>
     </div>
-
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/toggle-searchbar.js"></script>
     <script src="https://kit.fontawesome.com/0c9120dd6a.js" crossorigin="anonymous"></script>
 </body>
 

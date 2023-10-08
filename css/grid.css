@@ -71,6 +71,8 @@ html {
 
 .search-bar {
     gap: .5rem;
+    overflow: hidden;
+    padding-left: 5px;
 }
 
 #cart-button {
@@ -126,6 +128,16 @@ html {
 
 .hidden {
     display: none;
+}
+
+.hide-bar {
+    margin-right: -285px;
+    transition: all .4s ease-in-out;
+}
+
+.show-bar {
+    margin-right: 0px;
+    transition: all .4s ease-in-out;
 }
 
 main {
