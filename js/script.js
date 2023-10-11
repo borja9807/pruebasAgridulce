@@ -14,17 +14,13 @@ const inventory = {
         XL: 3
     }
 };
+const cartContent = document.getElementById('cart-content');
 const cartContainer = document.getElementById('cart-container');
 const cartButton = document.getElementById('cart-button');
 const closeCartButton = document.getElementById('close-cart');
 const cartItemsList = document.getElementById('cart-items');
 const cartTotal = document.getElementById('cart-total');
-
-function toggleCart() {
-    cartContainer.classList.toggle('cart-visible');
-    cartContainer.classList.toggle('cart-hidden');
-}
-
+const modal = document.querySelector('.modal');
 
 
 // Arreglo para almacenar los productos en el carrito
@@ -32,16 +28,22 @@ const cart = [];
 
 // Mostrar el carrito
 cartButton.addEventListener('click', () => {
-    renderCart();
-    cartContainer.classList.add('cart-visible');
-    cartContainer.classList.remove('cart-hidden');
+    modal.classList.add('active');
+    
 });
 
 // Ocultar el carrito
 closeCartButton.addEventListener('click', () => {
-    cartContainer.classList.remove('cart-visible');
-    cartContainer.classList.add('cart-hidden');
+    modal.classList.remove('active');
 });
+
+window.onclick = (event) => {
+    const outModal = document.querySelector('.modal.active');
+
+    if(event.target === outModal) {
+        outModal.classList.remove('active');
+    }
+}
 
 
 // Función para agregar un producto al carrito

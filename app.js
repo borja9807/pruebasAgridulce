@@ -40,6 +40,47 @@ app.get('', (req, res) => {
     
 })
 
+// obtener producto con id
+app.get('/:id', (req, res) => {
+
+    pool.getConnection((err, connection) => {
+        if(err) throw err
+        console.log(`connected as id ${connection.threadId}`)
+
+        connection.query('SELECT * FROM inventariosDeProductos WHERE id = ?', [req.params.id], (err, rows) =>{
+            connection.release() //return the connection to pool
+
+            if(!err){
+                res.send(rows)
+            } else {
+                console.log(err)
+            }
+        })
+    })
+
+    
+})
+
+// eliminar producto con id
+app.delete('/:id', (req, res) => {
+
+    pool.getConnection((err, connection) => {
+        if(err) throw err
+        console.log(`connected as id ${connection.threadId}`)
+
+        connection.query('DELETE * FROM inventariosDeProductos WHERE id = ?', [req.params.id], (err, rows) =>{
+            connection.release() //return the connection to pool
+
+            if(!err){
+                res.send(`El producto con ID: ${(req.params.id)} ha sido eliminado.`)
+            } else {
+                console.log(err)
+            }
+        })
+    })
+
+    
+})
 
 
 
