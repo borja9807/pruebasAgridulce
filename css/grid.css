@@ -5,7 +5,7 @@
 }
 
 html {
-    font-family: "Magicher", serif;
+    font-family: system-ui;
 }
 
 .main-header {
@@ -75,10 +75,6 @@ html {
     padding-left: 5px;
 }
 
-#cart-button {
-    color: #1D1D1B;
-}
-
 .cart,
 .search-bar {
     align-items: center;
@@ -114,7 +110,7 @@ html {
     border-radius: .375rem;
     color: #111111;
     cursor: pointer;
-    font-family: serif;
+    font-family: system-ui;
     font-size: 1rem;
     opacity: 0.7;
     padding: 8px;
@@ -185,29 +181,6 @@ main {
     width: 100%;
 }
 
-#cart-container {
-    background-color: #9b8888;
-    box-shadow: -2px 0 100px rgba(0, 0, 0, 0.2);
-    height: 40%;
-    overflow-y: auto;
-    position: fixed;
-    right: -300px;
-    /* Inicialmente fuera de la pantalla */
-    top: 0;
-    transition: right 0.3s ease-in-out;
-    width: 300px;
-    z-index: 999;
-}
-
-.cart-hidden {
-    right: -300px;
-    /* Oculto inicialmente */
-}
-
-.cart-visible {
-    right: 0px !important;
-    /* Visible al desplegar */
-}
 
 @media (max-width: 1080px) {
     .grid-layout {

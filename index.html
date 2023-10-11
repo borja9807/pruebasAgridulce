@@ -9,6 +9,7 @@
     <!-- <link rel="stylesheet" type="text/css" href="./css/styles.css"> -->
     <link rel="stylesheet" href="./fonts/Magicher.ttf">
     <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/cart.css">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -62,7 +63,7 @@
                 </form>
             </div>
             <div class="cart">
-                <a href="#" onclick="toggleCart()" id="cart-button"><i class="fa-solid fa-cart-shopping fa-lg"></i> </a>
+                <i id="cart-button" class="fa-solid fa-cart-shopping fa-lg"></i>
                 <div class="cart-container">
                     <!-- Contenido del carrito -->
                 </div>
@@ -363,14 +364,31 @@
     </main>
 
     <!-- Carrito de compras -->
-    <div id="cart-container" class="cart-hidden">
-        <div id="cart-content">
-            <h2>Carrito de Compras</h2>
-            <ul id="cart-items">
-                <!-- Los elementos del carrito se mostrarán aquí -->
-            </ul>
-            <p>Total: <span id="cart-total">$0.00</span></p>
-            <button id="close-cart">Cerrar Carrito</button>
+    <div id="cart-container" class="modal">
+        <div class="modal-container">
+            <div id="cart-content" class="modal-content cart-visible">
+                <header class="cart-header">
+                    <h2>Carrito</h2>
+                </header>
+                <section class="cart-body">
+                    <ul id="cart-items">
+                        <!-- Los elementos del carrito se mostrarán aquí -->
+                    </ul>
+                </section>
+                <footer class="cart-footer">
+                    <div class="cart-list-price">
+                        <ul>
+                            <li>Subtotal: <strong>$0.00</strong></li>
+                            <li>Descuento: <strong>$0.00</strong></li>
+                        </ul>
+                        <h4 class="modal-cart-total">Total: <span id="cart-total">$0.00</span></h4>
+                    </div>
+                    <div class="modal-btns">
+                        <button id="close-cart" class="btn close-btn">Cerrar Carrito</button>
+                        <a href="#" class="btn">Comprar ahora</a>
+                    </div>
+                </footer>
+            </div>
         </div>
     </div>
     <script src="js/script.js"></script>

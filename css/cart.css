@@ -1,0 +1,153 @@
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
+#cart-button {
+    color: #1D1D1B;
+}
+
+.modal {
+    background-color: #fff;
+    height: 100vh;
+    max-width: 300px;
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transform: translateX(100%);
+    transition: all 0.2s ease-in;
+    visibility: hidden;
+    width: 100%;
+    z-index: 20000;
+}
+
+.modal::after {
+    background-color: rgba(0, 0, 0, 0.6);
+    content: '';
+    height: 100vh;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    right: 300px;
+    top: 0;
+    transition: all .2s ease-in;
+    width: 100vw;
+    z-index: 999;
+}
+
+.modal.active {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}
+
+.modal.active::after {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-container {
+    height: 100%;
+    padding: 30px;
+    position: relative;
+    z-index: 1000;
+}
+
+.modal-content {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    overflow: hidden;
+}
+
+.cart-header {
+    border-bottom: 1px solid #dbdbdb;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+
+.cart-header h2 {
+    color: #135337;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.cart-body {
+    flex-grow: 1;
+    overflow-x: hidden;
+    overflow-y: visible;
+    position: relative;
+    width: 100%;
+}
+
+.cart-footer {
+    border-top: 1px solid #dbdbdb;
+    margin-top: 30px;
+    padding-top: 30px;
+}
+
+.cart-list-price ul li+li {
+    margin-top: 10px;
+}
+
+.cart-list-price ul li strong {
+    color: #135337;
+}
+
+.modal-cart-total {
+    color: #135337;
+    font-size: 1.25rem;
+    margin: 20px 0;
+}
+
+.modal-btns {
+    border-top: 1px solid #dbdbdb;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+.btn {
+    all: unset;
+    background: #135337;
+    border: 2px solid #135337;
+    border-radius: .375rem;
+    color: #fff;
+    cursor: pointer;
+    font-family: system-ui;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 8px;
+    text-align: center;
+    transition: all .2s ease;
+}
+
+.btn:hover {
+    background: #fff;
+    border: 2px solid #135337;
+    color: #135337;
+}
+
+.close-btn {
+    background: #fff;
+    color: #135337;
+}
+
+.close-btn:hover {
+    background: #135337;
+    color: #fff;
+}
+
+.cart-hidden {
+    right: -300px;
+    /* Oculto inicialmente */
+}
+
+.cart-visible {
+    right: 0px !important;
+    /* Visible al desplegar */
+}
