@@ -101,25 +101,27 @@ html {
 }
 
 .search-bar-input:focus {
-    border-color: #06d892;
+    border-color: #135337;
 }
 
 .search-bar-btn {
-    background: #06d892;
-    border: 2px solid #06d892;
+    all: unset;
+    background: #135337;
+    border: 2px solid #135337;
     border-radius: .375rem;
-    color: #111111;
+    color: #fff;
     cursor: pointer;
     font-family: system-ui;
     font-size: 1rem;
-    opacity: 0.7;
+    font-weight: 500;
     padding: 8px;
     transition: all .3s ease-out;
 }
 
 .search-bar-btn:hover,
 .search-bar-btn:focus {
-    opacity: 1;
+    background: #fff;
+    color: #135337;
 }
 
 .hidden {
