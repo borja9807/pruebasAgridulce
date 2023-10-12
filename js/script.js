@@ -50,7 +50,15 @@ window.onclick = (event) => {
 function addToCart(productId) {
     const product = document.querySelector(`#cart-item-${productId}`);
     if (product) {
-        alert("El producto ya está en el carrito.");
+        Toastify({
+            text: "El producto ya está en el carrito",
+            duration: 1500,
+            className: "warning",
+            style: {
+              background: "#ffc107",
+              color: "#343a40",
+            }
+          }).showToast();
     } else {
         const productName = document.querySelector(`#product-${productId} h2`).textContent;
         const selectedSize = document.querySelector(`#product-${productId} #size-${productId}`);
@@ -63,13 +71,27 @@ function addToCart(productId) {
             listItem.textContent = `${productName} - Talla: ${size}`;
             listItem.id = `cart-item-${productId}`;
             cartItems.appendChild(listItem);
-            alert("Producto agregado al carrito.");
+            Toastify({
+                text: "Producto agregado al carrito",
+                duration: 1500,
+                className: "success",
+                style: {
+                  background: "#28a745",
+                }
+              }).showToast();
             
             // Actualiza el inventario después de agregar al carrito
             inventory[productId][size] -= 1;
             document.getElementById(`available-quantity-${productId}`).textContent = `Cantidad Disponible: ${inventory[productId][size]}`;
         } else {
-            alert("No hay suficiente inventario disponible.");
+            Toastify({
+                text: "No hay suficiente inventario disponible",
+                duration: 1500,
+                className: "error",
+                style: {
+                  background: "#dc3545",
+                }
+              }).showToast();
         }
         
     }   

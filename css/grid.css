@@ -8,6 +8,12 @@ html {
     font-family: system-ui;
 }
 
+main {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
 .main-header {
     align-items: center;
     background: #ffefcd;
@@ -25,7 +31,6 @@ html {
     height: auto;
     width: 11.25rem;
 }
-
 
 .menu {
     align-items: center;
@@ -129,19 +134,13 @@ html {
 }
 
 .hide-bar {
-    margin-right: -285px;
-    transition: all .4s ease-in-out;
+    margin-right: -290px;
+    transition: all .3s ease-in-out;
 }
 
 .show-bar {
     margin-right: 0px;
-    transition: all .4s ease-in-out;
-}
-
-main {
-    align-items: center;
-    display: flex;
-    justify-content: center;
+    transition: all .3s ease-in-out;
 }
 
 .container {
@@ -160,10 +159,9 @@ main {
 }
 
 .grid-layout {
-    aspect-ratio: auto;
     display: grid;
     gap: 5px;
-    grid-template-columns: 23% 23% 23% 23%;
+    grid-template-columns: 24% 24% 24% 24%;
     justify-content: center;
     width: 100%;
 }
@@ -177,15 +175,25 @@ main {
 }
 
 .product-image {
-    height: 100%;
-    max-height: 25rem;
-    max-width: 22.5rem;
     width: 100%;
+    aspect-ratio: 3/4;
 }
 
 
-@media (max-width: 1080px) {
+@media (max-width: 1140px) {
     .grid-layout {
-        grid-template-columns: 33% 33% 33%;
+        grid-template-columns: 32% 32% 32%;
+    }
+}
+
+@media (max-width: 720px) {
+    .grid-layout {
+        grid-template-columns: 48% 48%;
+    }
+}
+
+@media (max-width: 420px) {
+    .grid-layout {
+        grid-template-columns: 94%;
     }
 }
